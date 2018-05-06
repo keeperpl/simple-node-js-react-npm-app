@@ -10,7 +10,10 @@ pipeline {
                 sh '''
                 npm --version
                 node --version
-                sudo npm install
+                cd $(npm root -g)/npm \
+                && npm install fs-extra \
+                && sed -i -e s/graceful-fs/fs-extra/ -e s/fs.rename/fs.move/ ./lib/utils/rename.js
+                #npm install
                 ''' 
             }
         }
