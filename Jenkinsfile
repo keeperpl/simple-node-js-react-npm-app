@@ -8,7 +8,6 @@ pipeline {
         stage('Build') { 
             steps {
                 sh '''
-                npm -g config set user root
                 npm install
                 ''' 
             }
