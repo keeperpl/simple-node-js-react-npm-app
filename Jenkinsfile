@@ -20,8 +20,8 @@ pipeline {
             }
             post {
                 always {
-                    junit 'report.xml' 
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                    //junit 'report.xml' 
                 }
             }
         }
