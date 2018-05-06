@@ -16,7 +16,7 @@ pipeline {
                 echo "aaaa" > report.xml
                 cat report.xml
                 echo "TestReport" > index.html
-                echo 'currentBuild.result: ' + currentBuild.result
+                echo "BUILD_NUMBER: $BUILD_NUMBER"
                 ''' 
             }
             post {
