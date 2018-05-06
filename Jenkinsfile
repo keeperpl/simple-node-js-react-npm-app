@@ -9,6 +9,7 @@ pipeline {
             steps {
                 sh '''
                 HOME=.
+                npm_config_cache=npm-cache
                 ls -l
                 pwd
                 npm install
