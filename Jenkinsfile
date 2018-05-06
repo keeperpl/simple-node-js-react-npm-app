@@ -14,6 +14,7 @@ pipeline {
                 npm install
                 #npm run test > report.xml 2>&1
                 echo "aaaa" > report.xml
+                cat report.xml
                 ''' 
             }
         }
