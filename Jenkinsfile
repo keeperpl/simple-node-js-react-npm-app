@@ -15,8 +15,7 @@ pipeline {
                 #npm run test > report.xml 2>&1
                 echo "aaaa" > report.xml
                 cat report.xml
-                echo "TestReport" > index.html
-                echo "BUILD_NUMBER: $BUILD_NUMBER"
+                echo "Test Report \n BUILD_NUMBER: $BUILD_NUMBER " > index.html
                 ''' 
             }
             post {
