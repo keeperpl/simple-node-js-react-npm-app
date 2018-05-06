@@ -17,6 +17,11 @@ pipeline {
                 cat report.xml
                 ''' 
             }
+            post {
+                always {
+                    junit '*.xml' 
+                }
+            }
         }
     }
 }
