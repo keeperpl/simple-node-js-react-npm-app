@@ -1,4 +1,5 @@
 pipeline {
+    withEnv(['npm_config_cache=npm-cache', 'HOME=.']) 
     agent {
         docker {
             image 'node:9-alpine' 
@@ -6,7 +7,6 @@ pipeline {
         }
     }
     stages {
-        withEnv(['npm_config_cache=npm-cache', 'HOME=.']) 
         stage('Build') { 
             steps {
                 sh '''
