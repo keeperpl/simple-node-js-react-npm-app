@@ -10,7 +10,8 @@ pipeline {
                 sh '''
                 ls -l
                 pwd
-                #npm install
+                npm install
+                ls -l
                 ''' 
             }
         }
