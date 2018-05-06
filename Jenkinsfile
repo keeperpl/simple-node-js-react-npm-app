@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'iron/node' 
+            image 'node:8-alpine' 
         }
     }
     stages {
