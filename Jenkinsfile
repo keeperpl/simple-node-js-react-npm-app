@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'node:9' 
+            args '-v $(pwd):/src'
         }
     }
     stages {
