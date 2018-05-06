@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                 HOME=.
-                CI = 'true' 
+                CI=true
                 #npm_config_cache=npm-cache
                 ls -l
                 pwd
