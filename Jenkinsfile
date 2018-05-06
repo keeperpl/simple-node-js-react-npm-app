@@ -11,11 +11,8 @@ pipeline {
                 sh '''
                 HOME=.
                 CI=true
-                #npm_config_cache=npm-cache
-                ls -l
-                pwd
                 npm install
-                ls -l
+                npm run test > report.xml 2>&1
                 ''' 
             }
         }
