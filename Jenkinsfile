@@ -8,7 +8,9 @@ pipeline {
         stage('Build') { 
             steps {
                 sh '''
-                npm install --no-bin-links
+                npm --version
+                node --version
+                sudo npm install
                 ''' 
             }
         }
