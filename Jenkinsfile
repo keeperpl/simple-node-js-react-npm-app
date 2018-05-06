@@ -21,7 +21,6 @@ pipeline {
             post {
                 always {
                     publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '.', reportFiles: 'index.html', reportName: 'HTMLReport', reportTitles: 'Rep'])
-                    //junit 'report.xml' 
                 }
             }
         }
