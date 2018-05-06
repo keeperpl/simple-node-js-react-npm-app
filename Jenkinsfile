@@ -1,5 +1,5 @@
 pipeline {
-    withEnv(['npm_config_cache=npm-cache', 'HOME=.']) 
+    //withEnv(['npm_config_cache=npm-cache', 'HOME=.']) 
     agent {
         docker {
             image 'node:9-alpine' 
@@ -10,6 +10,9 @@ pipeline {
         stage('Build') { 
             steps {
                 sh '''
+                HOME=.
+                npm_config_cache=npm-cache
+                echo $HOME
                 ls -l
                 pwd
                 npm install
