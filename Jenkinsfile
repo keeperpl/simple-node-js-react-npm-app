@@ -18,11 +18,11 @@ pipeline {
                 echo "Test Report \n BUILD_NUMBER: $BUILD_NUMBER " > index.html
                 ''' 
             }
-            post {
-                always {
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '.', reportFiles: 'index.html', reportName: 'HTMLReport', reportTitles: 'Rep'])
-                }
-            }
+           // post {
+            //    always {
+             //       publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '.', reportFiles: 'index.html', reportName: 'HTMLReport', reportTitles: 'Rep'])
+             //   }
+            //}
         }
     }
 }
