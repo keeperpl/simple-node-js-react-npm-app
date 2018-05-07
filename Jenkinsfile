@@ -9,6 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 sh '''
+                #!/bin/bash
                 HOME=.
                 CI=true
                 npm install
